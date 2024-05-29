@@ -530,9 +530,9 @@ dependencies = [
 [[package]]
 name = "clvmr"
 version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b4b05784a842671ccedbefb0e3dabab7d0eb3411395f5182a4c68722a5284591"
+source = "git+https://github.com/Chia-Network/clvm_rs?rev=0e12fd49da962365e409a4d889c618b854ee34b3#0e12fd49da962365e409a4d889c618b854ee34b3"
 dependencies = [
+ "base64ct",
  "chia-bls 0.4.0",
  "hex-literal",
  "k256",
@@ -542,6 +542,7 @@ dependencies = [
  "num-traits",
  "p256",
  "sha2",
+ "sha3",
 ]
 
 [[package]]
@@ -965,6 +966,15 @@ dependencies = [
  "once_cell",
  "sha2",
  "signature",
+]
+
+[[package]]
+name = "keccak"
+version = "0.1.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ecc2af9a1119c51f12a14607e783cb977bde58bc069ff0c3da1095e635d70654"
+dependencies = [
+ "cpufeatures",
 ]
 
 [[package]]
@@ -1616,6 +1626,16 @@ dependencies = [
  "cfg-if",
  "cpufeatures",
  "digest",
+]
+
+[[package]]
+name = "sha3"
+version = "0.10.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "75872d278a8f37ef87fa0ddbda7802605cb18344497949862c0d4dcb291eba60"
+dependencies = [
+ "digest",
+ "keccak",
 ]
 
 [[package]]
